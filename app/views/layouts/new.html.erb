@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What The Block</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<!-- header -->
+    <header class="row">
+    <div class="col-4 links"><%= link_to 'Menu', '#' %></div>
+    <div class="col-4 links">
+    <%= link_to root_path do %><img src="http://whattheblock.org/Asset_1.png" style="width: 10%; margin-top:-10px"><%end%>
+    </div>
+    <div class="col-4 links"><%= link_to 'Contribute', new_quote_path %></div>
+  </header>
+  <hr />
+    <br class="clear" />
+<!-- page title -->
+    <div class="slogan col-12">What The Block do<b><i> Humans</i></b> think about <b><i>Blockchain</i></b>?</div>
+    <div class="container">
+<!-- error handling -->
+  <% if flash[:error].present? %>
+    <div class="col-10 offset-1 alert alert-danger">
+      <%= flash[:error].html_safe%>
+    </div>
+  <% end %>
+    <%= yield %>
+    
+    </div>
+<!-- footer -->    
+  <div class="footer">
+      <div class="container">
+        <div class="row">
+        <p class="footer-text">Copyright 2018: WhatTheBlock.org</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

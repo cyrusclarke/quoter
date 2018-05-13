@@ -5,10 +5,15 @@ class QuotesController < ApplicationController
 
 	def new
 		@quote = Quote.new
+		render layout: "new"
+
 	end
 
 	def create 
-		Quote.create(quote_params)
+		@quote = Quote.create(quote_params)
+		if @quote.invalid?
+			flash[:error]='Could Not Save Your Entry, please ensure it is less than 140 characters!'
+		end
 		redirect_to root_path
 	end
 
