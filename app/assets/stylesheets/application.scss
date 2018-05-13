@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+h1 {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 600;
+	letter-spacing: -1.5px;
+}
+
+h2 {
+  	font-family: "Helvetica Neue", Helvetica, sans-serif;
+  	font-weight: 200;
+  	letter-spacing: -1.5px;
+}
+
+
+.clear {
+	clear: both;
+}
+
+.slogan {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	padding-top: 30px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.links {
+	text-align: center;
+	padding-top: 26px;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.links a {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;	
+	color: black;
+	font-weight:bold;
+	border-bottom: 3px solid yellow;
+
+}
+
+.links a:hover {
+	background-color: yellow;
+}
+
+hr {
+	clear:both;
+}
+
+header {
+	border-top: 9px solid yellow;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  background-color: yellow;
+}
+
+.footer-text {
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0px;
+}
+
+.btn.sharp  {
+	border-radius:0;
+	background: none;
+	border: 2px solid black;
+	padding: 12px 22px;
+	color:black;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.btn.sharp:hover  {
+	border: 2px solid yellow;
+	background-color: yellow;
+}
+
+/*.logo a {
+	max-width: 10%;
+}*/
+ 
