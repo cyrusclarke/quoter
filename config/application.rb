@@ -17,6 +17,9 @@ module Quotes
 
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+    #rails precomile workflow 
+    config.serve_static_assets = true
     
   end
 end
