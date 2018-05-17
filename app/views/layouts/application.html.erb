@@ -2,19 +2,31 @@
 
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" > 
   <head>
     <title>What The Block</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-top w3-large w3-animate-left" style="display:none;z-index:2;max-width:25%;min-width:200px;background:black;color:yellow" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button" style="color:yellow"><b>X</b></a>
+  <a href="http://whattheblock.org/#approach"  onclick="w3_close()" class="w3-bar-item menu-button" style="color:yellow">Approach</a>
+  <a href="http://whattheblock.org/#services" onclick="w3_close()" class="w3-bar-item menu-button" style="color:yellow">Services</a>
+  <a href="http://whattheblock.org/#people" onclick="w3_close()" class="w3-bar-item menu-button" style="color:yellow">People</a>
+  <a href="http://whattheblock.org/#contact" onclick="w3_close()" class="w3-bar-item menu-button" style="color:yellow" id="contact">Contact Us</a>
+</nav>
+
+
 <!-- header -->
   	<header class="row">
-    <div class="col-4 links"><%= link_to 'Menu', '#' %></div>
+    <div class="col-4 links"><button id="singlebutton" name="singlebutton" class="btn menu" 
+ 	onclick="w3_open()">Menu</button></div>
   	<div class="col-4 links">
   	<%= link_to root_path do %><img class ="logo" src="http://whattheblock.org/Asset_1.png"><%end%>
   	</div>
@@ -48,5 +60,16 @@
   			</div>
   		</div>
   	</div>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
   </body>
 </html>
