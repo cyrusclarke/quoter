@@ -88,6 +88,14 @@ header {
   text-align: center;
 }
 
+@media (max-width: 750px) {
+.footer {
+	display: none;
+	}
+
+}
+
+
 .footer-text {
 	font-size: 0.75rem;
 	margin-left: auto;
